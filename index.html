@@ -27,7 +27,12 @@
             <a href="#benefits">Возможности</a>
           </nav>
 
-          <a class="webbtn" href="https://" target="_blank" rel="noreferrer">
+          <a
+            class="webbtn js-open-modal"
+            target="_blank"
+            rel="noreferrer"
+            href="#"
+          >
             <svg
               class="icon primary"
               viewBox="0 0 24 24"
@@ -72,7 +77,7 @@
             </p>
 
             <div class="cta">
-              <a class="btn btn-lg btn-primary" href="/download">
+              <a class="btn btn-lg btn-primary js-open-modal" href="#">
                 <svg
                   viewBox="0 0 24 24"
                   fill="none"
@@ -298,7 +303,7 @@
             </div>
           </div>
 
-          <a class="btn btn-lg btn-primary" href="/download">
+          <a class="btn btn-lg btn-primary js-open-modal cta2-btn" href="#">
             <svg
               viewBox="0 0 24 24"
               fill="none"
@@ -339,8 +344,21 @@
       <div class="footer-bottom">© <span id="year"></span> Relay</div>
     </footer>
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+    <div class="modal-overlay" id="soonModal" aria-hidden="true">
+      <div
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+      >
+        <h3 id="modalTitle">Relay скоро выйдет</h3>
+        <p>Приложение пока находится в разработке. Скоро будет доступно.</p>
+        <button class="btn btn-lg btn-primary" id="closeModal" type="button">
+          Понятно
+        </button>
+      </div>
+    </div>
+
+    <script src="./assets/js/modal.js"></script>
   </body>
 </html>
